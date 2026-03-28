@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/user")
 public class UserController implements UserFeignApi {
 
-    public static final String PAGE = "/page";
     @Autowired
     private UserService userService;
 
@@ -72,7 +71,7 @@ public class UserController implements UserFeignApi {
      * @param size 每页大小
      * @return 分页结果
      */
-    @GetMapping(PAGE)
+    @GetMapping("/page")
     public Result<PageResult<UserVO>> pageUsers(
             @RequestParam(name = "current", defaultValue = "1") long current,
             @RequestParam(name = "size", defaultValue = "10") long size) {
