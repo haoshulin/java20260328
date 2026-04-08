@@ -1,0 +1,27 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: aegis-gateway
+
+  config:
+    import:
+      - optional:nacos:aegis-gateway-dev.yaml
+
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848
+      username: nacos
+      password: nacos
+      discovery:
+        namespace: 9ea18a50-4841-4180-8cb3-aa148b691030
+      config:
+        namespace: 9ea18a50-4841-4180-8cb3-aa148b691030
+        group: DEFAULT_GROUP
+        file-extension: yaml
+        
+    gateway:
+      discovery:
+        locator:
+          enabled: true

@@ -1,0 +1,22 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: user-center
+
+  config:
+    import:
+      - optional:nacos:user-center-dev.yaml
+
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848
+      username: nacos
+      password: nacos
+      discovery:
+        namespace: 9ea18a50-4841-4180-8cb3-aa148b691030
+      config:
+        namespace: 9ea18a50-4841-4180-8cb3-aa148b691030
+        group: DEFAULT_GROUP
+        file-extension: yaml

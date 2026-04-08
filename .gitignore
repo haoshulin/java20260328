@@ -1,0 +1,9 @@
+# 项目排除路径
+/aegis-gateway/target/
+/aegis-user-center/user-center-api/target/
+/aegis-user-center/user-center-app/target/
+/aegis-user-center/user-center-dao/target/
+/aegis-user-center/user-center-model/target/
+/aegis-user-center/user-center-service/target/
+/aegis-user-center/user-center-web/target/
+/.idea
