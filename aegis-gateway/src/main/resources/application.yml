@@ -1,21 +1,3 @@
-server:
-  port: 8082
 spring:
-  application:
-    name: aegis-gateway
-  cloud:
-    nacos:
-      discovery:
-        server-addr: 127.0.0.1:8848
-    gateway:
-      discovery:
-        locator:
-          enabled: true # 开启从注册中心动态创建路由的功能
-      routes:
-        - id: user-center-route
-          uri: lb://user-center
-          predicates:
-            - Path=/api/user/**
-          # filters:
-          #   - AuthFilter # 预留鉴权过滤器
-          
+  profiles:
+    active: dev   # 本地默认 dev
